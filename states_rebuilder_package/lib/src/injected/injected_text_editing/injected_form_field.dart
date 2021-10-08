@@ -74,6 +74,9 @@ abstract class InjectedFormField<T> implements InjectedBaseState<T> {
     return _baseFormField.__focusNode as _FocusNode;
   }
 
+  /// Invoke field validators and return true if the field is valid.
+  bool validate();
+
   /// If true the [TextField] is clickable and selectable but not editable.
   late bool isReadOnly;
   late bool _isEnabled;
